@@ -20,23 +20,8 @@
     <tr>
         <td ng-repeat="day in main.days">{{day.day}}</td>
     </tr>
-    <tr>
-    <tr>
-        <td ng-repeat="date in main.months[0].monthDays[0]">{{date.date}}</td></tr>
-    <tr>
-        <td ng-repeat="date in main.months[0].monthDays[1]">{{date.date}}</td>
-    </tr>
-    <tr>
-        <td ng-repeat="date in main.dates[2]">{{date.date}}</td>
-    </tr>
-    <tr>
-        <td ng-repeat="date in main.dates[3]">{{date.date}}</td>
-    </tr>
-    <tr>
-        <td ng-repeat="date in main.dates[4]">{{date.date}}</td>
-    </tr>
-    <tr>
-        <td ng-repeat="date in main.dates[5]">{{date.date}}</td>
+    <tr ng-repeat="week in month.monthDays">
+        <td ng-repeat="day in week">{{day.date}}</td>
     </tr>
 
 </table>
