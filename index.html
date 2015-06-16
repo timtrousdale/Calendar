@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>MLATC Calendar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.ctrl.js"></script>
+</head>
+<body ng-app="CalendarApp" ng-controller="calendarController as main">
+<table BORDER=3 CELLSPACING=3 CELLPADDING=3 ng-repeat="month in main.months">
+    <tr>
+        <td COLSPAN="7"><B>{{month.monthName}}</B></td>
+    </tr>
+    <tr>
+        <td COLSPAN="7"><I>{{main.title}}</I></td>
+    </tr>
+    <tr>
+        <td ng-repeat="day in main.days">{{day.day}}</td>
+    </tr>
+    <tr>
+    <tr>
+        <td ng-repeat="date in main.months[0].monthDays[0]">{{date.date}}</td></tr>
+    <tr>
+        <td ng-repeat="date in main.months[0].monthDays[1]">{{date.date}}</td>
+    </tr>
+    <tr>
+        <td ng-repeat="date in main.dates[2]">{{date.date}}</td>
+    </tr>
+    <tr>
+        <td ng-repeat="date in main.dates[3]">{{date.date}}</td>
+    </tr>
+    <tr>
+        <td ng-repeat="date in main.dates[4]">{{date.date}}</td>
+    </tr>
+    <tr>
+        <td ng-repeat="date in main.dates[5]">{{date.date}}</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
