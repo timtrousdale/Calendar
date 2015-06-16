@@ -2,17 +2,18 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <title>MLATC Calendar</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="angular.min.js"></script>
-    <script src="script.js"></script>
-    <script src="main.ctrl.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.ctrl.js"></script>
 </head>
 <body ng-app="CalendarApp" ng-controller="calendarController as main">
 <table BORDER=3 CELLSPACING=3 CELLPADDING=3 ng-repeat="month in main.months">
     <tr>
-        <td COLSPAN="7"><B>{{month.monthName}}</B></td>
+        <td COLSPAN="7"><B>{{month.monthName}}, {{main.year}}</B></td>
     </tr>
     <tr>
         <td COLSPAN="7"><I>{{main.title}}</I></td>

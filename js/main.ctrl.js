@@ -1,4 +1,4 @@
-var year = 2015;
+var year = 2016;
 var today = new Date("January 1, "+ year);
 var startDay = today.getDay() + 1;
 var monthList = [];
@@ -31,7 +31,7 @@ var monthMaker = function(day1, daysPerMonth) {
         week1.push({date : ''});
     }
     var j = 1;
-    for (var i = startDay; i < 8; i++){
+    for (var i = day1; i < 8; i++){
         week1.push({date : j});
         j++;
     }
@@ -46,7 +46,7 @@ var monthMaker = function(day1, daysPerMonth) {
         }
         weekList.push(week);
         // the first day of the next month
-        startDay = i;
+        if (i < 7) {startDay = i};
 
     }
 
@@ -57,7 +57,6 @@ var yearMaker = function(input){
         var monthDays = monthMaker(startDay, input[i].daysInMonth);
         monthList.push({monthName: input[i].name, monthDays: monthDays});
     }
-    console.log(monthList);
     return monthList;
 };
 
@@ -75,6 +74,7 @@ angular.module('CalendarApp').controller('calendarController', function(){
     ];
 
     vm.months = yearMaker(listOfMonths);
+    vm.year = year;
 
 
 });
