@@ -1,8 +1,64 @@
-.standard {
- text-align: center;
 
-}
-tr, td {
-  text-align: center;
-  width: 35px;
-}
+  $mlatc_maroon: #8c3b3b;
+  $mlatc_lightmaroon: #396d6d;
+  $mlatc_lightestmaroon: #db9191;
+
+  html {
+    background-color: lightgrey;
+  }
+
+  .blank {
+    height: 20px;
+    border: none;
+  }
+
+  .standard {
+   text-align: center;
+  }
+  .calendarTable{
+    display: inline-block;
+  }
+  table {
+    border-radius: 10px;
+
+  }
+  tbody{
+    display: inline;
+    margin: 0 auto;
+
+  }
+  tr, td {
+    text-align: center;
+    width: 35px;
+    background-color: #80a0a0;
+
+  }
+  tr {
+
+    .month_cell {
+      border-radius: 25px;
+      background-color: $mlatc_maroon;
+       color: whitesmoke;
+    }
+  }
+  td.day_cell {
+      background-color: $mlatc_lightmaroon;
+
+
+  }
+  .grayed{
+    background-color: #555555;
+  }
+  .sunday, .saturday{
+    background-color: $mlatc_lightestmaroon;
+    color: black;
+
+  }
+  img.logo{
+      display: block;
+      margin: 0 auto;
+    }
+  .controls{
+    display: block;
+    margin: 10px 30% 10px 0;
+  }

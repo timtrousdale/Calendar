@@ -1,8 +1,49 @@
+html {
+  background-color: lightgrey; }
+
+.blank {
+  height: 20px;
+  border: none; }
+
 .standard {
   text-align: center; }
 
+.calendarTable {
+  display: inline-block; }
+
+table {
+  border-radius: 10px; }
+
+tbody {
+  display: inline;
+  margin: 0 auto; }
+
 tr, td {
   text-align: center;
-  width: 35px; }
+  width: 35px;
+  background-color: #80a0a0; }
+
+tr .month_cell {
+  border-radius: 25px;
+  background-color: #8c3b3b;
+  color: whitesmoke; }
+
+td.day_cell {
+  background-color: #396d6d; }
+
+.grayed {
+  background-color: #555555; }
+
+.sunday, .saturday {
+  background-color: #db9191;
+  color: black; }
+
+img.logo {
+  display: block;
+  margin: 0 auto; }
+
+.controls {
+  display: block;
+  margin: 10px 30% 10px 0; }
 
 /*# sourceMappingURL=styles.css.map */
